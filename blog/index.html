@@ -10,7 +10,7 @@
       
       
       
-        <link rel="next" href="category/hello/">
+        <link rel="next" href="category/git/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -333,6 +333,31 @@
   
   
     <li class="md-nav__item">
+      <a href="category/git/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Git
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
       <a href="category/hello/" class="md-nav__link">
         
   
@@ -441,6 +466,52 @@
       <header class="md-typeset">
         
       </header>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2025-08-15 00:00:00+00:00">15. August 2025</time></li>
+        
+          <li class="md-meta__item">
+            in
+            
+              <a href="category/git/" class="md-meta__link">Git</a></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              1 Min. Lesezeit
+            
+          </li>
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="cleanup-git-comit"><a class="toclink" href="2025/08/15/cleanup-git-comit/">Cleanup git comit</a></h2>
+<p>Run</p>
+<pre><code class="language-shell">#!/usr/bin/env bash
+
+git filter-branch --commit-filter '
+      if [ true ];
+      then
+              GIT_AUTHOR_NAME=&quot;truble maker&quot;;
+              GIT_AUTHOR_EMAIL=&quot;original-trublemaker@users.noreply.github.com&quot;;
+              git commit-tree &quot;$@&quot;;
+      else
+              git commit-tree &quot;$@&quot;;
+      fi' HEAD
+</code></pre>
+<p>to overwrite all author names and author emails in <strong>all</strong> commit history.</p>
+<p>One can also replace <code>true</code> with a predicate to just replace matched commits.</p>
+    
+  </div>
+</article>
       
         <article class="md-post md-post--excerpt">
   <header class="md-post__header">
