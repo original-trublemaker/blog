@@ -523,6 +523,61 @@
     <div class="md-post__meta md-meta">
       <ul class="md-meta__list">
         <li class="md-meta__item">
+          <time datetime="2025-08-19 00:00:00+00:00">19. August 2025</time></li>
+        
+          <li class="md-meta__item">
+            in
+            
+              <a href="category/git/" class="md-meta__link">Git</a></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              1 Min. Lesezeit
+            
+          </li>
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="empfindliche-daten-aus-git-repository-entfernen"><a class="toclink" href="2025/08/19/empfindliche-daten-aus-git-repository-entfernen/">Empfindliche Daten aus Git-Repository entfernen</a></h2>
+<p>Github hat eine Anleitung dafür <sup id="fnref:1"><a class="footnote-ref" href="2025/08/19/empfindliche-daten-aus-git-repository-entfernen/#fn:1">1</a></sup>. Hier sind meine einige Beispiele:</p>
+<h3 id="loschung-einer-datei-in-der-gesamte-history"><a class="toclink" href="2025/08/19/empfindliche-daten-aus-git-repository-entfernen/#loschung-einer-datei-in-der-gesamte-history">Löschung einer Datei in der gesamte History</a></h3>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git-filter-repo<span class="w"> </span>--invert-paths<span class="w"> </span>--path<span class="w"> </span>PATH-TO-YOUR-FILE-WITH-SENSITIVE-DATA
+</span></code></pre></div>
+<p>Beispiel:</p>
+<p>Zum Löschen die Datei <code>.secre.salite</code> man kann diesen Befehl ausführen.</p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git-filter-repo<span class="w"> </span>--invert-paths<span class="w"> </span>--path<span class="w"> </span>.secret.sqlite
+</span></code></pre></div>
+<p>Das Option <code>--sensitive-data-removal</code> funktioniert nicht bei mir, ich habe sie nicht genutzt.</p>
+
+    
+      <nav class="md-post__action">
+        <a href="2025/08/19/empfindliche-daten-aus-git-repository-entfernen/">
+          Weiterlesen
+        </a>
+      </nav>
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="https://github.com/original-trublemaker.png" alt="Felix">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
           <time datetime="2025-08-15 00:00:00+00:00">15. August 2025</time></li>
         
           <li class="md-meta__item">
